@@ -32,17 +32,13 @@ const Products = () => {
     { name: "Technology", icon: Zap },
   ];
 
-  // Product Images
-  const getImage = (name) =>
-    `https://source.unsplash.com/400x300/?${encodeURIComponent(name)}`;
-
-  // Products Data (Reduced to 20 items)
+  // ================= PRODUCTS WITH PEXELS IMAGES =================
   const products = [
-    // Seeds
     {
       id: 1,
       name: "Hybrid Tomato Seeds",
       category: "Seeds",
+      image: "https://images.pexels.com/photos/533280/pexels-photo-533280.jpeg",
       price: 450,
       mrp: 550,
       discount: 18,
@@ -58,6 +54,7 @@ const Products = () => {
       id: 2,
       name: "Wheat Field Seeds",
       category: "Seeds",
+      image: "https://images.pexels.com/photos/326082/pexels-photo-326082.jpeg",
       price: 320,
       mrp: 380,
       discount: 16,
@@ -66,13 +63,13 @@ const Products = () => {
       desc: "Premium wheat seeds suitable for all soil types.",
       stock: 120,
       delivery: "Free",
-      bestseller: false,
       purity: "99%",
     },
     {
       id: 3,
       name: "Chili Hybrid Seeds",
       category: "Seeds",
+      image: "https://images.pexels.com/photos/533360/pexels-photo-533360.jpeg",
       price: 280,
       mrp: 350,
       discount: 20,
@@ -88,6 +85,8 @@ const Products = () => {
       id: 4,
       name: "Organic Fertilizer",
       category: "Fertilizers",
+      image:
+        "https://images.pexels.com/photos/4505168/pexels-photo-4505168.jpeg",
       price: 560,
       mrp: 650,
       discount: 14,
@@ -96,12 +95,13 @@ const Products = () => {
       desc: "Enriched with natural micronutrients for healthy growth.",
       stock: 85,
       delivery: "₹50",
-      bestseller: false,
     },
     {
       id: 5,
       name: "NPK Complex",
       category: "Fertilizers",
+      image:
+        "https://images.pexels.com/photos/7728089/pexels-photo-7728089.jpeg",
       price: 720,
       mrp: 850,
       discount: 15,
@@ -110,12 +110,13 @@ const Products = () => {
       desc: "Balanced nitrogen, phosphorus, potassium formula.",
       stock: 60,
       delivery: "Free",
-      bestseller: false,
     },
     {
       id: 6,
       name: "Bio Pesticide",
       category: "Pesticides",
+      image:
+        "https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg",
       price: 380,
       mrp: 450,
       discount: 16,
@@ -124,12 +125,13 @@ const Products = () => {
       desc: "Eco-friendly pest control safe for all crops.",
       stock: 25,
       delivery: "₹40",
-      bestseller: false,
     },
     {
       id: 7,
       name: "Drip Irrigation Kit",
       category: "Equipment",
+      image:
+        "https://images.pexels.com/photos/2132171/pexels-photo-2132171.jpeg",
       price: 2400,
       mrp: 3000,
       discount: 20,
@@ -144,6 +146,8 @@ const Products = () => {
       id: 8,
       name: "Power Tiller",
       category: "Equipment",
+      image:
+        "https://images.pexels.com/photos/2132180/pexels-photo-2132180.jpeg",
       price: 45000,
       mrp: 52000,
       discount: 13,
@@ -152,12 +156,13 @@ const Products = () => {
       desc: "8 HP power tiller for small to medium farms.",
       stock: 8,
       delivery: "₹500",
-      bestseller: false,
     },
     {
       id: 9,
       name: "Soil Moisture Sensor",
       category: "Technology",
+      image:
+        "https://images.pexels.com/photos/3912981/pexels-photo-3912981.jpeg",
       price: 1200,
       mrp: 1500,
       discount: 20,
@@ -172,6 +177,8 @@ const Products = () => {
       id: 10,
       name: "Weather Station",
       category: "Technology",
+      image:
+        "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg",
       price: 8500,
       mrp: 10000,
       discount: 15,
@@ -180,12 +187,16 @@ const Products = () => {
       desc: "Complete farm weather monitoring system.",
       stock: 8,
       delivery: "₹150",
-      bestseller: false,
     },
+  ];
+
+  // ================= ADDITIONAL PRODUCTS (20 total) =================
+  const additionalProducts = [
     {
       id: 11,
       name: "Cauliflower Seeds",
       category: "Seeds",
+      image: "https://images.pexels.com/photos/65174/pexels-photo-65174.jpeg",
       price: 210,
       mrp: 250,
       discount: 16,
@@ -201,6 +212,8 @@ const Products = () => {
       id: 12,
       name: "Vermicompost",
       category: "Fertilizers",
+      image:
+        "https://images.pexels.com/photos/5529566/pexels-photo-5529566.jpeg",
       price: 380,
       mrp: 450,
       discount: 16,
@@ -215,6 +228,8 @@ const Products = () => {
       id: 13,
       name: "Neem Oil",
       category: "Pesticides",
+      image:
+        "https://images.pexels.com/photos/5678863/pexels-photo-5678863.jpeg",
       price: 320,
       mrp: 400,
       discount: 20,
@@ -229,6 +244,8 @@ const Products = () => {
       id: 14,
       name: "Water Pump",
       category: "Equipment",
+      image:
+        "https://images.pexels.com/photos/5564600/pexels-photo-5564600.jpeg",
       price: 5200,
       mrp: 6500,
       discount: 20,
@@ -243,6 +260,8 @@ const Products = () => {
       id: 15,
       name: "Drone Sprayer",
       category: "Technology",
+      image:
+        "https://images.pexels.com/photos/163168/agriculture-sprayer-drone-quadcopter-163168.jpeg",
       price: 85000,
       mrp: 100000,
       discount: 15,
@@ -257,6 +276,7 @@ const Products = () => {
       id: 16,
       name: "Coriander Seeds",
       category: "Seeds",
+      image: "https://images.pexels.com/photos/60210/pexels-photo-60210.jpeg",
       price: 160,
       mrp: 220,
       discount: 27,
@@ -272,6 +292,8 @@ const Products = () => {
       id: 17,
       name: "DAP Fertilizer",
       category: "Fertilizers",
+      image:
+        "https://images.pexels.com/photos/5584598/pexels-photo-5584598.jpeg",
       price: 1350,
       mrp: 1500,
       discount: 10,
@@ -286,6 +308,8 @@ const Products = () => {
       id: 18,
       name: "Knapsack Sprayer",
       category: "Equipment",
+      image:
+        "https://images.pexels.com/photos/2568911/pexels-photo-2568911.jpeg",
       price: 1800,
       mrp: 2200,
       discount: 18,
@@ -300,6 +324,8 @@ const Products = () => {
       id: 19,
       name: "GPS Tracker",
       category: "Technology",
+      image:
+        "https://images.pexels.com/photos/4246115/pexels-photo-4246115.jpeg",
       price: 3200,
       mrp: 4000,
       discount: 20,
@@ -314,6 +340,8 @@ const Products = () => {
       id: 20,
       name: "Brinjal Seeds",
       category: "Seeds",
+      image:
+        "https://images.pexels.com/photos/5863048/pexels-photo-5863048.jpeg",
       price: 190,
       mrp: 250,
       discount: 24,
@@ -325,7 +353,10 @@ const Products = () => {
       bestseller: false,
       purity: "98%",
     },
-  ].map((p) => ({ ...p, image: getImage(p.name) }));
+  ];
+
+  // Combine all products
+  const allProducts = [...products, ...additionalProducts];
 
   // States
   const [activeCategory, setActiveCategory] = useState("All Products");
@@ -343,7 +374,7 @@ const Products = () => {
   const [orderDetails, setOrderDetails] = useState(null);
 
   // Filter products
-  const filtered = products
+  const filtered = allProducts
     .filter(
       (p) =>
         (activeCategory === "All Products" || p.category === activeCategory) &&
@@ -403,7 +434,7 @@ const Products = () => {
     (sum, item) =>
       item.delivery === "Free"
         ? sum
-        : sum + parseInt(item.delivery.replace("₹", "")),
+        : sum + parseInt(item.delivery.replace("₹", "") || "0"),
     0
   );
   const couponDiscount = couponApplied ? cartTotal * 0.1 : 0;
@@ -459,10 +490,10 @@ const Products = () => {
   return (
     <main className="min-h-screen bg-gray-50">
       {/* Header */}
-      <section className="bg-gradient-to-r from-white-700 to-white-600 py-12">
+      <section className="bg-gradient-to-r from-green-700 to-green-600 py-12">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-black mb-4">Our Products</h1>
-          <p className="text-black-100 text-lg">
+          <h1 className="text-4xl font-bold text-white mb-4">Our Products</h1>
+          <p className="text-green-100 text-lg">
             Premium agricultural products for your farming success.
           </p>
         </div>
@@ -520,6 +551,7 @@ const Products = () => {
                   <div key={item.id} className="flex gap-3 border-b pb-4 mb-4">
                     <img
                       src={item.image}
+                      alt={item.name}
                       className="w-16 h-16 object-cover rounded"
                     />
                     <div className="flex-1">
